@@ -1,0 +1,50 @@
+<nav class="navbar navbar-light br-15 p-4" style="background-color: #4C8A8A;">
+  <a class="navbar-brand col-md-12 col-sm-12 m-0 pr-0">
+    <div class="row col-md-12 col-sm-12 mr-0 pr-0">
+      <div class="row col-md-8 col-sm-12">
+        <img src="../assets/logo/hospital.png" height="45px" width="45px" alt="">
+        <img src="../assets/logo/ranna.png" height="45px" width="45px" alt="">
+        <p style="color: #FFFFFF;padding-top: 10px;margin-bottom: 5px;font-size: 80%;padding-left: 10px">
+          ระบบตรวจวัดคุณภาพน้ำบ่อบำบัดน้ำเสีย</p>
+      </div>
+      <div class="row col-md-4 col-sm-12 mt-1 p-0" style="display:block;text-align:right">
+        <button type="button" class="mr-2 btn btn-light" (click)="downloadExcel()" style="color: #4C8A8A;">ส่งออกแบบ Excel</button>
+        <button type="button" class="btn btn-light" (click)="createPdf()" style="color: #4C8A8A;">ส่งออกแบบ PDF</button>
+        <!-- <button type="button" class="btn btn-light" (click)="addData()">Add Date</button>
+        <button type="button" class="btn btn-light" (click)="RemoveData()">Remove</button> -->
+      </div>
+    </div>
+  </a>
+</nav>
+
+<div class="container pb-5" style="background-color: #FFFFFF">
+
+  <!-- กรดด่าง ออกซิเจน -->
+  <div class="row pt-5 col-md-12 col-sm-12 m-0">
+    <div class="col-md-6 col-sm-12">
+      <app-card-grahp [typeData]="typeDataPh"></app-card-grahp>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+      <app-card-grahp [typeData]="typeDataO2"></app-card-grahp>
+    </div>
+  </div>
+
+  <!-- ตะกอน คลอรีน -->
+  <div class="row pt-5 col-md-12 col-sm-12 m-0">
+    <div class="col-md-6 col-sm-12">
+      <app-card-grahp [typeData]="typeDataORP"></app-card-grahp>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+      <app-card-grahp [typeData]="typeDataTDS"></app-card-grahp>
+    </div>
+  </div>
+
+  <!-- ระดับน้ำ -->
+  <div class="row pt-5 col-md-12 col-sm-12 m-0">
+    <div class="col-md-6 col-sm-12">
+      <app-card-grahp [typeData]="typeDataWaterLevel"></app-card-grahp>
+    </div>
+  </div>
+</div>

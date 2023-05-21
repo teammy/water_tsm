@@ -1,0 +1,60 @@
+/* .navbar {
+    margin-bottom: 30px;
+} */
+
+.br-15 {
+border-radius: 15px 15px 0px 0px;
+}
+.navbar-brand {
+    /* margin: 0 auto; */
+    font-family: "minimal";
+    font-size: 30px;
+}
+
+.list-group-item {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.list-group-item:hover,
+.list-group-item.active {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    outline: 0;
+}
+.font-white{
+    font-family: "minimal";
+    font-size: 20px;
+    color: #fff;
+}
+
+.h50{
+    height: 50px;
+}
+
+.f-mininal{
+    font-family: "minimal";
+}
+
+.square {
+    height: 20px;
+    width: 20px;
+  }
+
+  .img-size{
+    width: 100px;
+    height: 50px;
+  }
+
+@font-face{
+    font-family: "minimal";
+    src: url("/assets/fonts/minimal/Minimal-Regular.ttf") format("truetype");
+}
+
+@media only screen and (max-width: 600px) {
+    .img-size {
+        width: 70px;
+        height: 50px;
+    }
+  }

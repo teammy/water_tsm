@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "water-system-70f86": {
+      "hosting": {
+        "angular-charts-app": [
+          "water-system-70f86"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "water-system-70f86"
+  }
+}

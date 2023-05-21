@@ -1,0 +1,35 @@
+<div class="card col-md-6 p-0" style="border-radius: 15px 15px 15px 15px">
+  <div class="row col-md-12 col-sm-12 card-header" [ngStyle]="{'background-color':color}"
+    style="margin-left: 0px;margin-right: 0px;border-radius: 15px 15px 0px 0px;">
+    <div class="col-md-10 p-0">
+      <p class="font-white p-0 m-0">{{title}}</p>
+      <p class="font-white p-0 m-0" style="font-size: 100%">{{lastTime}}</p>
+    </div>
+    <div class="col-md-12 p-0" style="text-align: right;">
+      <img class="col-md-4 pr-0 img-size" src={{iconUrl}}>
+    </div>
+
+  </div>
+  <div class="row mt-4 mb-3 mx-2">
+    <div class="col-6 d-flex align-items-end justify-content-start">
+      <div [ngStyle]="{'color':color}" style="font-size: xx-large; line-height: 100%;">{{lastValue}}</div>
+    </div>
+    <div class="col-6 d-flex align-items-end justify-content-end">
+      <div [ngStyle]="{'color':color}" style="font-size: medium;">({{unit}})</div>
+    </div>
+  </div>
+</div>
+
+<div class="card mt-4 pb-3 pl-3">
+  <p class="ml-3 mt-3 f-mininal" style="color: grey;font-size: large">กราฟแสดง{{title}}</p>
+  <app-line-chart [typeData]="typeData" (LastDataEvent)="LastDataEvent($event)"></app-line-chart>
+  <div class="row col-12 mt-1 ml-1" *ngFor="let _colorText of colorText">
+  <div class="row col-8">
+    <div class="square" [ngStyle]="{'background-color': _colorText.Color}"></div>
+    <p class="ml-3 f-mininal mb-0" style="color: grey;font-size: large">{{_colorText.Text}}</p>
+  </div>
+  <div class="col-4">
+    <p class="ml-3 f-mininal mb-0" style="color: grey;font-size: large">{{_colorText.preText}}</p>
+  </div>
+</div>
+</div>

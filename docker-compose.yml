@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  app:
+    container_name: angular_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8884:80'
+    restart: always
+    volumes:
+      - .:/app
+      
